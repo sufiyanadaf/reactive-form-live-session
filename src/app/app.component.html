@@ -1,0 +1,57 @@
+ 
+ <div id="box">
+    <form [formGroup]="myForm">
+        <label>Enter First name:</label>
+        <br>
+        <input type="text" formControlName="first_name" placeholder="Enter_Firstname">
+        <p *ngIf="first_name.touched && first_name.invalid" class="text-danger">
+            Enter Your First_name
+        </p>
+        <br><br>
+        <label>Enter Last name:</label>
+        <br>
+        <input type="text" formControlName="last_name" placeholder="Enter_Lastname">
+        <p *ngIf="last_name.touched && last_name.invalid">
+            Enter Your last_name
+        </p>
+        <br><br>
+        <label>Enter Mobile number:</label>
+        <br>
+        <input type="text" formControlName="mobile_number" placeholder="Enter_Mobile number">
+        <p *ngIf="mobile_number.touched && mobile_number.invalid">
+            Enter Your mobile_number
+        </p>
+        <br><br>
+        <label>Enter Date of Birth:</label>
+        <br>
+        <input type="date" formControlName="dob" placeholder="Enter_date of birth">
+        <p *ngIf="dob.touched && dob.invalid">
+            Enter Your Date of Birth
+        </p>
+        <br><br>
+        <label>Enter email:</label>
+        <br>
+        <input type="email" formControlName="email" placeholder="Enter_email">
+        <p *ngIf="email.touched && email.invalid">
+            Enter Your First_name
+        </p>
+        <br><br>
+        <label>Enter name:</label>
+        <br>
+        <input type="password" formControlName="password" placeholder="Enter_Password">
+        <p *ngIf="password.touched && password.invalid">
+            Enter Your password
+        </p>
+        <br><br>
+        <label>Enter name:</label>
+        <br>
+        <input type="password" formControlName="confirm_password" placeholder="Enter_Confirm password">
+        <p *ngIf="confirm_password.touched && confirm_password.invalid">
+            Enter Your First_name
+        </p>
+        <br><br>
+        <button (click)="submit()">Submit</button>
+
+    </form>
+ </div>
+ <router-outlet></router-outlet>
